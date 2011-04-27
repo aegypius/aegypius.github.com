@@ -1,4 +1,4 @@
 auto: true
-server: false 
-permalink: none
+server: false
+permalink: /:categories/:year-:month-:day/:title.html
 
