@@ -4,4 +4,5 @@ title: Home
 ---
 <h2><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h2>
 {{ site.posts.first.content }}
-<span>{{ site.posts.first.date }}</span>
+<span>posted on {{ site.posts.first.date | date_to_string }}</span>
+<a href="{{ site.posts.first.url }}#disqus_thread" data-disqus-identifier="{{ site.posts.first.url }}">No comment, be the first !</a>
