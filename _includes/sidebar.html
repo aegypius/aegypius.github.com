@@ -1,0 +1,35 @@
+<section id="sidebar" class="span4">
+<!--
+  <section class="vcard">
+    <h3>About me</h3>
+    <img class="logo" src="/images/logo_dark_80x80.png" />
+    My name is <span class="fn">Nicolas LAURENT</span> (<span class="nickname">aegypius</span>)
+    from <span class="locality">Nantes</span>, <span class="country-name">France</span>. 
+    I'm a developer.
+    <ul class="social-networks">
+				<li>
+					<a href="http://www.linkedin.com/in/nicolaslaurent" rel="me" class="icon linkedin">linkedin</a>
+				</li>
+				<li>
+					<a href="http://twitter.com/aegypius" rel="me" class="icon twitter">twitter</a>
+				</li>
+				<li>
+					<a href="https://github.com/aegypius" rel="me" class="icon github">github</a>
+				</li>
+				<li>
+					<a href="http://steamcommunity.com/id/aegypius" rel="me" class="icon steam">steam</a>
+				</li>
+			</ul>
+  </section>
+	-->
+	<section class="tags">
+		<h3>Tags</h3>
+		<ul class="nav nav-list">
+			{% for tag in site.tags %}
+			<li>
+				<a href="/tags/{{ tag | first | downcase  }}/">{{ tag | first | downcase }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</section>
+</section>

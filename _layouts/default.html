@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+   <head profile="http://microformats.org/profile/hcard">
+      <meta http-equiv="content-type" content="text/html;charset:utf-8"/>
+			<title>{{ page.title }}</title>
+			<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+			<link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+			<!--[if IE 7]><link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome-ie7.css" rel="stylesheet"><![endif]-->
+			<link type="text/css" rel="stylesheet" href="{{ BASE_URL }}/scripts/SyntaxHighlighter/styles/shCore.css" />
+			<link type="text/css" rel="stylesheet" href="{{ BASE_URL }}/scripts/SyntaxHighlighter/styles/shThemeDefault.css" />
+  	  <meta name="author"      content="Nicolas LAURENT">
+      <meta name="generator"   content="hand generated">
+			<meta name="description" content="Nicolas LAURENT's blog">
+   </head>
+	 <body class="{{ page.type }} center">
+		 <div class="container">
+      <header id="branding">
+      	 {% if page.type == 'home' %}
+         <h1 id="site-name">
+            <a rel="me home" href="{{ site.base }}">aegypius://</a>
+         </h1>
+         {% else %}
+         <div id="site-name">
+            <a rel="me home" href="{{ site.base }}">aegypius://</a>
+         </div>
+         {% endif %}
+         <div id="site-description">think, experiment & share</div>
+      </header>
+
+			{% include nav.html %}
+
+			<div class="row">
+				<section id="content" class="span8">
+	         {{ content }}
+	      </section>
+
+      	{% include sidebar.html %}
+			</div>
+
+      {% include footer.html %}
+
+      {% if site.disqus.id %}
+         {% include disqus.html %}
+			{% endif %}
+			</div>
+			{% include scripts.html %}
+    </body>
+</html>
+

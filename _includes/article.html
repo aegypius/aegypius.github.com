@@ -1,0 +1,15 @@
+<article>
+	<div id="post-{{ article.id }}" class="post post-{{ article.id }}">
+		<h2 class="entry-title"><a href="{{ article.url }}" rel="bookmark">{{ article.title }}</a></h2>
+		<div class="entry-info">
+      <abbr class="publish" title="{{ article.date | date_to_xmlschema }}">{{ article.date | date: '%B %d, %Y' }}</abbr>
+			<span class="entry-tags"> <strong>Posted in:</strong> {% for tag in article.tags %}{% if forloop.index > 1 %}, {% endif %}<a href="/tags/{{ tag | downcase }}/">{{ tag }}</a>{% endfor %} </span>
+		</div>
+		<div class="entrybody">
+			{{ article.content }}
+		</div>
+		<div class="entrycomments">
+			<a href="{{ article.url }}#disqus_thread">No comment, be the first !</a>
+		</div>
+	</div>
+</article>

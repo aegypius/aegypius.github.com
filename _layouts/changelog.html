@@ -1,0 +1,17 @@
+---
+layout: default
+title: Changelog
+disqus: no
+---
+<h1>{{ page.title }}</h1>
+
+{% for log in page.changelog %}
+<section id="commit-{{ log.sha }}">
+ <p class="meta">
+    <span class="date" title="{{ log.date }}">{{ log.date | date_to_string }}</span> -
+    <span class="author">{{ log.author.name }}</span>
+  </p>
+  <div class="message">{{ log.message | markdownify }}</div>
+</section>
+{% endfor %}
+

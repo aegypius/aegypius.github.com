@@ -1,0 +1,20 @@
+---
+layout: default
+use_comments: yes
+type: posts
+---
+<article>
+	<div id="post-{{ page.id }}" class="post post-{{ page.id }}">
+		<h1 class="entry-title">{{ page.title }}</h1>
+		<div class="entry-info">
+      <abbr class="publish" title="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</abbr>
+			<span class="entry-tags"> <strong>Posted in:</strong> {% for tag in page.tags %}{% if forloop.index > 1 %}, {% endif %}<a href="/tags/{{ tag | downcase }}/">{{ tag }}</a>{% endfor %} </span>
+		</div>
+		<div class="entrybody">
+			{{ content }}
+		</div>
+		<div class="entrycomments">
+      <div id="disqus_thread"></div>
+		</div>
+	</div>
+</article>

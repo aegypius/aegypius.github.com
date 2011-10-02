@@ -1,0 +1,10 @@
+<nav class="navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li><a href="/">Home</a></li>
+			{% for category in site.categories limit:20 %}
+			<li><a href="/categories/{{ category | first }}/">{{ category | first }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</nav>

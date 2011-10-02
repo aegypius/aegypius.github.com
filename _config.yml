@@ -1,0 +1,38 @@
+### Site Globals
+base:            http://www.aegypius.com
+author:          aegypius
+title:           aegypius:// ―  think, experiment & share
+
+### Jekyll Configuration
+safe:            true
+auto:            false
+server:          false
+server_port:     4000
+
+source:          .
+destination:     _site
+plugins:         _plugins
+
+
+future:          false
+lsi:             false
+pygments:        true
+markdown:        redcarpet
+permalink:       /:year/:month/:title/
+
+redcarpet:
+  extensions: [ :fenced_code_blocks ]
+
+exclude: ['README.md', 'lib', 'wordpress.xml'] 
+  
+### Disqus 
+disqus:
+  id: aegypius-com
+    
+### Analytics plugin configuration
+analytics:
+  id: UA-379585-1
+
+
+
+

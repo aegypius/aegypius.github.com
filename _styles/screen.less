@@ -1,0 +1,210 @@
+@import "semantic.gs/reset";
+@import "semantic.gs/grid";
+@import "typography";
+@import "fonts";
+@import "highlight";
+
+@column-width: 60;
+	background: #333;
+@gutter-width: 20;
+@columns: 12;
+
+@total-width: 960px;
+html {
+  padding: 5px;
+  body {
+
+	width: @total-width;
+
+	/* Grid System  ------------------------------------------------ */
+	header, nav, footer {
+		.column(12)
+	}
+    #content {
+      .column(9)
+    }
+
+    #sidebar {
+      .column(3)
+    }
+
+	#timeline {
+		.column(12)
+	}
+
+    footer {
+      .column(12);
+      margin-top: 10px !important;
+      padding: 5px 10px;
+      text-align: center;
+      border: 1px solid #d3d1c7;
+    }
+
+	/* Appearance -------------------------------------------------- */
+	
+	.font-lucida(75%);
+	line-height: 1.3em;
+
+	&.center {
+	  float: none;
+	  display: block;
+      margin: 0px auto 0px auto;
+      padding: 0px 20px;
+    }
+
+    a {
+    	&:focus, 
+    	&:hover, 
+    	&:active {
+    		outline: none;
+    	}
+    	
+    	&:link , 
+    	&:visited { 
+    		color: #313428;
+    	}
+    	&:hover { 
+    		color: #C00;
+    	}
+    	text-decoration: none;
+    }
+
+	/* ----------------------------------------------------------------
+	  Header
+	---------------------------------------------------------------- */
+
+	header {
+		overflow: hidden;
+
+		#site-name {
+			margin: 0;
+			height: 40px;
+			font-size: 3em;
+			line-height: 1;
+      padding: 5px;
+
+			a {
+				position: relative;
+				text-decoration: none;
+				font-size: 1.25ex;
+				.font-ubuntu();
+			}
+		}
+		#site-description {
+      padding: 15px;
+			color: #7d716d;
+      text-align: right;
+      margin-top: -47px;
+			.font-shadows(12pt);
+		}
+	}
+
+	/* ----------------------------------------------------------------
+	  Navigation
+	---------------------------------------------------------------- */
+ 	nav {
+    	ul {
+	    	li {
+	    		display: inline;
+	    		list-style: none;
+	    		a {
+	    			display: inline;
+	    			width: auto;
+	    			text-decoration: none;
+	    			text-transform: uppercase;
+	    			padding: 0 6px;
+	    			&:link ,
+	    			&:visited {
+	    				color: #aaa;
+    				}
+    				&:hover {
+    					color: #c00;
+    				}
+	    		}
+	    	}
+    	}
+    }
+
+	/* ----------------------------------------------------------------
+	  Sidebar
+	---------------------------------------------------------------- */
+    #sidebar {
+       section {
+    	  background-color: #f5f5f5;
+        border: 1px solid #D3D1C7;
+        padding: 10px;
+        margin-bottom: 10px;
+       }
+    }
+
+	/* ----------------------------------------------------------------
+	  Content
+	---------------------------------------------------------------- */
+    #content {
+      /*
+       #background-color: #f5f5f5;
+       #border: 1px solid #D3D1C7;
+       #margin-right: -2px;
+      */
+      margin: 0;
+
+       li p { margin: 0 }
+       article {
+          background: transparent url(../images/article_shadows.png) no-repeat bottom left;
+          padding: 0 0 10px;
+          margin: 0 0 30px;
+
+         .post {
+            border: 1px solid #D3D1C7;
+            background: #f5f5f5;
+            padding: 10px;
+            .entry-title {
+               margin: 3px 0;
+               font-weight: bold;
+               .font-ubuntu(2em);
+               word-spacing: 0px;
+               letter-spacing: -1px;
+            }
+            .entry-info {
+               text-transform: uppercase;
+               color: #848485;
+               font-size: 11px;
+               line-height: 1.4;
+               border-bottom: 1px dotted #848485;
+               margin-bottom: 12px;
+               .entry-author {
+                  display: inline;
+                  address {
+                     display: inline;
+                  }
+               }
+               .entry-tags {
+                  display: block;
+               }
+               a {
+                  color: #666;
+                  text-decoration: none;
+               }
+            }
+         }
+       }
+
+    }
+
+	/* ----------------------------------------------------------------
+	  Footer
+	---------------------------------------------------------------- */
+    footer {
+    /*
+       position: absolute;
+       left: 0;
+       right: 0;
+       width: 100%;
+       margin: 0;
+       background-color: #303030;
+     */
+    }
+
+  }
+}
+

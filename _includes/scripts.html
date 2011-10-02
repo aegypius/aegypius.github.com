@@ -1,0 +1,24 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{ BASE_URL }}/scripts/SyntaxHighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="{{ BASE_URL }}/scripts/SyntaxHighlighter/scripts/shAutoloader.js"></script>
+<script type="text/javascript">
+;(function($, undefined) {
+		"use strict";
+		$(document).ready(function() {
+			$('pre code[class]').each(function() {
+				var $code = $(this),
+				    brush = $code.attr('class');
+						$code.parent().text($code.text()).addClass('brush: '+brush);
+						});
+			SyntaxHighlighter.defaults['toolbar'] = false;
+			SyntaxHighlighter.autoloader(
+				'js jscript javascript	{{ BASE_URL }}/scripts/SyntaxHighlighter/scripts/shBrushJScript.js',
+				'java                   {{ BASE_URL }}/scripts/SyntaxHighlighter/scripts/shBrushJava.js',
+				'php										{{ BASE_URL }}/scripts/SyntaxHighlighter/scripts/shBrushPhp.js',
+				'sh bash								{{ BASE_URL }}/scripts/SyntaxHighlighter/scripts/shBrushBash.js'
+			);
+			SyntaxHighlighter.all();
+		});
+})(jQuery);
+</script>
