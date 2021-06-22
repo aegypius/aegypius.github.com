@@ -14,7 +14,7 @@ GEM
       maruku (~> 0.5)
       pygments.rb (~> 0.3.2)
     kramdown (0.13.8)
-    liquid (2.4.1)
+    liquid (2.6.3)
     maruku (0.6.0)
       syntax (>= 1.0.0)
     posix-spawn (0.3.6)
@@ -32,7 +32,7 @@ PLATFORMS
 DEPENDENCIES
   RedCloth (= 4.3.2)
   jekyll (= 0.12.0)
-  liquid (= 2.4.1)
+  liquid (= 2.6.3)
   maruku (= 0.6.0)
   rdiscount (= 1.6.8)
   redcarpet (= 3.5.1)
