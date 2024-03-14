@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    RedCloth (4.3.3)
+    RedCloth (4.3.4)
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
     colorator (1.1.0)
@@ -70,7 +70,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  RedCloth (= 4.3.3)
+  RedCloth (= 4.3.4)
   jekyll (= 4.3.3)
   liquid (= 4.0.4)
   maruku (= 0.7.3)
