@@ -58,7 +58,7 @@ GEM
       ffi (~> 1.0)
     rdiscount (2.2.7.3)
     redcarpet (3.6.0)
-    rexml (3.3.7)
+    rexml (3.3.9)
     rouge (4.4.0)
     safe_yaml (1.0.5)
     sass-embedded (1.78.0)
