@@ -2,7 +2,7 @@
 source "https://rubygems.org"
 
 # gem "rails"
-gem 'jekyll',     '4.3.4'
+gem 'jekyll',     '4.4.1'
 gem 'liquid',     '4.0.4'
 gem 'redcarpet',  '3.6.0'
 gem 'maruku',     '0.7.3'
